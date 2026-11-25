@@ -51,9 +51,9 @@ After completing go to the Download folder in your PC and right click that downl
 - Choose Hardware configuration according to your system give this at least *512 MB* Base Memory and CPUs *1*
 - Specify  virtual Hard disk --> use an Existing Virtual Hard Disk , File click *Add* button --> then specify that downloaded , Extracted folder where the *Metasploitable.vmdk* file will appear then double click that file and click finish.
 
-![VirtualBox Setup]("Metasploitable-2/01-Lab-Setup/Screenshots/Setup Meta 1.png")
+![VirtualBox Setup](Metasploitable-2/01-Lab-Setup/Screenshots/Setup Meta%201.png)
 
-![VirtualBox Setup]("Metasploitable-2/01-Lab-Setup/Screenshots/Setup Meta 2.png")
+![VirtualBox Setup](Metasploitable-2/01-Lab-Setup/Screenshots/Setup Meta%202.png)
 
 ## Network Configuration 
 - VirtualBox 
@@ -77,7 +77,7 @@ afte putting these credentials you will be redirected to the command prompt as l
 ```bash
 ifconfig
 ```
-![IP Checking]("Metasploitable-2/01-Lab-Setup/Screenshots/Meta ifconfig.png")
+![IP Checking](Metasploitable-2/01-Lab-Setup/Screenshots/Meta%20ifconfig.png)
 
 You will get the network information of the Metasploitable 2 machine
 
@@ -85,6 +85,6 @@ You will get the network information of the Metasploitable 2 machine
 ```bash
 ping -c4 10.10.10.3 #put your metasploitable ip here
 ```
-![Network Connection Check]("Metasploitable-2/01-Lab-Setup/Screenshots/Kali Linux ping.png")
+![Network Connection Check](Metasploitable-2/01-Lab-Setup/Screenshots/Kali%20Linux%20ping.png)
 
 if responce is showing as *64* then congratulations to you, You Set it UP....!!!
