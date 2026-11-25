@@ -51,9 +51,9 @@ After completing go to the Download folder in your PC and right click that downl
 - Choose Hardware configuration according to your system give this at least *512 MB* Base Memory and CPUs *1*
 - Specify  virtual Hard disk --> use an Existing Virtual Hard Disk , File click *Add* button --> then specify that downloaded , Extracted folder where the *Metasploitable.vmdk* file will appear then double click that file and click finish.
 
-![VirtualBox Setup](Metasploitable-2/01-Lab-Setup/Screenshots/Setup Meta%201.png)
+![VirtualBox Setup](Metasploitable-2/01-Lab-Setup/Screenshots/Setup%20Meta%201.png)
 
-![VirtualBox Setup](Metasploitable-2/01-Lab-Setup/Screenshots/Setup Meta%202.png)
+![VirtualBox Setup](Metasploitable-2/01-Lab-Setup/Screenshots/Setup%20Meta%202.png)
 
 ## Network Configuration 
 - VirtualBox 
