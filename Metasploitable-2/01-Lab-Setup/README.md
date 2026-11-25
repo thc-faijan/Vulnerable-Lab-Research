@@ -85,6 +85,6 @@ You will get the network information of the Metasploitable 2 machine
 ```bash
 ping -c4 10.10.10.3 #put your metasploitable ip here
 ```
-![Network Connection Check](Metasploitable-2/01-Lab-Setup/Screenshots/Kali%20Linux%20ping.png)
+![Network Connection Check](Metasploitable-2%2F01-Lab-Setup%2FScreenshots%2FKali%20Linux%20ping.png)
 
 if responce is showing as *64* then congratulations to you, You Set it UP....!!!
