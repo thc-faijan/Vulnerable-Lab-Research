@@ -168,3 +168,22 @@ msf auxiliary(bailiwicked_domain) > run
 
 ```
 
+### Port 80 Exploit
+
+```bash
+nmap -sC -sV -p80 10.10.10.3
+
+PORT   STATE SERVICE VERSION
+80/tcp open  http    Apache httpd 2.2.8 ((Ubuntu) DAV/2)
+|_http-title: Metasploitable2 - Linux
+|_http-server-header: Apache/2.2.8 (Ubuntu) DAV/2
+MAC Address: 08:00:27:C7:96:A4 (Oracle VirtualBox virtual NIC)
+
+```
+Image here : Meta Port 80
+
+Here i Got 5 Vulnerable Site as i type 10.10.10.3:80 at search bar
+
+let's Visit and try to Exploit one by one
+
+### 
